@@ -5,6 +5,7 @@ import Logo from "@/public/images/logo.svg";
 import MenuOpen from "@/public/images/menuOpen.svg";
 import MenuClose from "@/public/images/menuClose.svg";
 import RightArrow from "@/public/images/rightArrow.svg";
+import Link from "next/link";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false); // State to control mobile menu
@@ -30,14 +31,16 @@ const Header = () => {
 
         <nav className="flex items-center justify-between   ">
           <div>
+            <Link href="/">
             <Image src={Logo} alt="StomaFlex Logo" />
+            </Link>
           </div>
           <div className="hidden md:flex items-center">
             <div className="xl:mr-[205px] lg:mr-[150px] sm:mr-10 mr-4 text-neutral-gray text-base font-normal font-primary leading-normal">
               <ul className="flex gap-8">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Product</li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/about">About Us</Link></li>
+                <li><Link href="/product">Product</Link></li>
                 <li>Contact Us</li>
               </ul>
             </div>
