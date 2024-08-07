@@ -7,12 +7,12 @@ import LinePrimary from "@/public/images/lineP.svg";
 const AboutUs = () => {
   return (
     <>
-      <div className="mt-32 xl:px-[90px] lg:px-[40px] px-5 flex flex-wrap">
+      <div className="mt-32 xl:px-[90px] lg:px-[40px] px-5 flex flex-wrap justify-center xl:justify-normal ">
         <div className="xl:w-[40%] ">
           <div className=" lg:w-[90%] text-neutral-gray text-xl font-semibold font-primary leading-[30px] flex gap-3 mt-10 ">
-            <Image src={LinePrimary} alt="Line"/>
+            <Image src={LinePrimary} alt="Line" className="" />
             Hubei Hendry Medical Appliance Co.,Ltd, was founded in September
-            2014.{" "}
+            2014.
           </div>
           <p className=" text-neutral-gray text-base font-normal font-primary leading-normal mt-5">
             Which is a enterprise integrating the R&D, production and sales of

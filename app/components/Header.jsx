@@ -41,7 +41,7 @@ const Header = () => {
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/product">Product</Link></li>
-                <li>Contact Us</li>
+                <li><Link href="/contact">Contact Us</Link></li>
               </ul>
             </div>
             <div className="px-[25px] py-3 bg-primary justify-center items-center gap-4 inline-flex text-white text-base font-medium font-primary">
@@ -65,16 +65,16 @@ const Header = () => {
           <div className="md:hidden bg-white flex items-center  flex-col ">
             
             <ul className="flex items-center w-full flex-col gap-4 pt-4 text-black text-base font-normal font-secondary leading-tight">
-              <li>Home</li>
+              <li><Link href="/">Home</Link></li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
-              <li>About Us</li>
+              <li><Link href="/about">About Us</Link></li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D]  "></div>
 
-              <li>Product</li>
+              <li><Link href="/product">Product</Link></li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
-              <li>Contact Us</li>
+              <li><Link href="/contact">Contact Us</Link></li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D]  "></div>
             </ul>
             <div className="px-[25px] mt-12 py-3 bg-primary justify-center items-center gap-4 inline-flex text-white text-base font-medium font-primary">
