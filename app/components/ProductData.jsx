@@ -3,67 +3,79 @@ import Link from "next/link";
 import Image from "next/image";
 import Product1 from "@/public/images/product1.svg";
 
-const ProductData = () => {
-  const productData = [
-    {
-      name: "One piece closed Ostomy bag ",
-      model: "Model: 2102",
-      url: Product1,
-      action: "View details",
-    },
-    {
-      name: "One piece closed Ostomy bag ",
-      model: "Model: 2102",
-      url: Product1,
-      action: "View details",
-    },
-    {
-      name: "One piece closed Ostomy bag ",
-      model: "Model: 2102",
-      url: Product1,
-      action: "View details",
-    },
-    {
-      name: "One piece closed Ostomy bag ",
-      model: "Model: 2102",
-      url: Product1,
-      action: "View details",
-    },
-    {
-      name: "One piece closed Ostomy bag ",
-      model: "Model: 2102",
-      url: Product1,
-      action: "View details",
-    },
-    {
-      name: "One piece closed Ostomy bag ",
-      model: "Model: 2102",
-      url: Product1,
-      action: "View details",
-    },
-    {
-      name: "One piece closed Ostomy bag ",
-      model: "Model: 2102",
-      url: Product1,
-      action: "View details",
-    },
-    {
-      name: "One piece closed Ostomy bag ",
-      model: "Model: 2102",
-      url: Product1,
-      action: "View details",
-    },
-    {
-      name: "One piece closed Ostomy bag ",
-      model: "Model: 2102",
-      url: Product1,
-      action: "View details",
-    },
-  ];
+const productData = [
+  {
+    id:"1",
+    name: "One piece closed Ostomy bag ",
+    model: "Model: 2102",
+    url: Product1,
+    action: "View details",
+  },
+  {
+    id:"2",
+    name: "One piece closed Ostomy bag ",
+    model: "Model: 2102",
+    url: Product1,
+    action: "View details",
+  },
+  {
+    id:"3",
+    name: "One piece closed Ostomy bag ",
+    model: "Model: 2102",
+    url: Product1,
+    action: "View details",
+  },
+  {
+    id:"4",
+    name: "One piece closed Ostomy bag ",
+    model: "Model: 2102",
+    url: Product1,
+    action: "View details",
+  },
+  {
+    id:"5",
+    name: "One piece closed Ostomy bag ",
+    model: "Model: 2102",
+    url: Product1,
+    action: "View details",
+  },
+  {
+    id:"6",
+    name: "One piece closed Ostomy bag ",
+    model: "Model: 2102",
+    url: Product1,
+    action: "View details",
+  },
+  {
+    id:"7",
+    name: "One piece closed Ostomy bag ",
+    model: "Model: 2102",
+    url: Product1,
+    action: "View details",
+  },
+  {
+    id:"8",
+    name: "One piece closed Ostomy bag ",
+    model: "Model: 2102",
+    url: Product1,
+    action: "View details",
+  },
+  {
+    id:"9",
+    name: "One piece closed Ostomy bag ",
+    model: "Model: 2102",
+    url: Product1,
+    action: "View details",
+  },
+];
+
+const ProductData = ({limit}) => {
+
+  const displayedProducts = limit ? productData.slice(0, limit) : productData;
   return (
     <>
       <div className="flex gap-10 justify-center mt-14 flex-wrap">
-        {productData.map((item, index) => (
+        {displayedProducts.map((item, index) => (
           <div
             className="bg-white shadow-lg  flex flex-col  py-8  justify-center w-[300px]"
             key={index}
@@ -75,7 +87,7 @@ const ProductData = () => {
               {item.name}
             </h2>
             <div className="mt-6">
-                <button className="px-[13px] py-[5px] border border-primary text-primary text-base font-medium font-primary">{item.action}</button>
+                <button className="px-[13px] py-[5px] border border-primary text-primary text-base font-medium font-primary"><Link href={`/product/singleP`} >{item.action}</Link></button>
             </div>
             </div>
           </div>

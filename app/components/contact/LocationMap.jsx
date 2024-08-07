@@ -9,7 +9,15 @@ const LocationMap = () => {
   return (
     <>
       <div className="mt-32">
-        <Image src={LocationMapImage} alt="Map" className="w-full" />
+      <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14495.85232539756!2d54.7278259!3d24.7281477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5effd1737a9a77%3A0x4bdf4e512ac74a2a!2sSafe%20Care%20Medical%20Industry!5e0!3m2!1sen!2s!4v1723027491491!5m2!1sen!2s"
+            width="100%"
+            height="600"
+            style={{ border: 0 }}
+            // allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen />
       </div>
       <div className="flex flex-wrap justify-center md:-mt-36 xl:px-0 lg:px-[40px] px-5 xs:gap-5">
         <div className="bg-[#F6E9F4] py-24 xl:pl-36 pl-[5%] pr-[100px] xs:w-full lg:pr-0 lg:w-[30%] ">
