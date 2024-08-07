@@ -22,7 +22,7 @@ const Vision = () => {
                 <div className='xs:mr-2'>
                     <div>
                         <div className='flex items-center gap-4'>
-                            <div className="w-[52px] h-[52px] bg-[#f5e9f0] rounded-[100px]" ><Image src={VisionIcon} alt='Vision' /></div>
+                            <div className="w-[52px] h-[52px] bg-[#f6e9f4] rounded-[100px]" ><Image src={VisionIcon} alt='Vision' /></div>
                             <div className="text-light-black text-[28px] font-normal font-secondary">Vision</div>
 
                         </div>
@@ -30,7 +30,7 @@ const Vision = () => {
                     </div>
                     <div className='mt-12'>
                         <div className='flex items-center gap-4'>
-                            <div className="w-[52px] h-[52px] bg-[#f5e9f0] rounded-[100px]" ><Image src={MissionIcon} alt='Mission' /></div>
+                            <div className="w-[52px] h-[52px] bg-[#f6e9f4] rounded-[100px]" ><Image src={MissionIcon} alt='Mission' /></div>
                             <div className="text-light-black text-[28px] font-normal font-secondary">Mission</div>
 
                         </div>
