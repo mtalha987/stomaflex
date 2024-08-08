@@ -3,7 +3,7 @@ import Image from "next/image";
 import Product1 from "@/public/images/product1.svg";
 import TabsProduct from "./TabsProduct";
 
-const ProductMainDetail = () => {
+const ProductMainDetail = (props) => {
   return (
     <>
       <div className="xl:px-[90px] lg:px-[40px] mt-10 px-5 flex flex-wrap md:flex-nowrap xl:gap-[90px] md:gap-10 ">
@@ -32,13 +32,14 @@ const ProductMainDetail = () => {
               be used for the enrichment of Vibrio spp. from food and water
               samples.
             </p>
-            <button className="w-[204px] h-12 bg-primary text-white text-base font-normal font-arial mt-10 xs:mb-10">
+            <button onClick={() => props.openPop(true)} className="w-[204px] h-12 bg-primary text-white text-base font-normal font-arial mt-10 xs:mb-10">
             Request for quote
             </button>
           </div>
         </div>
       </div>
       <TabsProduct/>
+      {/* <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} /> */}
     </>
   );
 };

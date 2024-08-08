@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Logo from "@/public/images/logo.svg";
 import SocialIcons from "@/public/images/social.svg";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -11,7 +12,9 @@ const Footer = () => {
           {/* Col1 */}
           <div>
             <div className="">
+              <Link href="/">
               <Image src={Logo} alt="logo" />
+              </Link>
             </div>
             <div className="mt-9">
               <p className=" text-neutral-light-gray text-base font-normal font-secondary leading-normal">
@@ -36,10 +39,10 @@ const Footer = () => {
                 Quick Links
               </h3>
               <ul className="flex flex-col gap-5 text-neutral-light-gray text-base font-normal font-secondary">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Product</li>
-                <li>Contact Us</li>
+                <li><Link href="/" >Home</Link></li>
+                <li><Link href="/about">About Us</Link></li>
+                <li><Link href="/product">Product</Link></li>
+                <li><Link href="/contact">Contact Us</Link></li>
               </ul>
             </div>
           </div>

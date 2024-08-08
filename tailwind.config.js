@@ -28,7 +28,7 @@ module.exports = {
       primary: ['Poppins', 'sans-serif'],
       secondary: ['Inter', 'serif'],
       arial: ['Arial', 'sans-serif'],
-      nohemi: ['Times New Roman', 'Times', 'serif'],
+      nohemi: ['Nohemi','serif'],
     },
     screens: {
       'sm': '576px',
@@ -57,6 +57,7 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "hero-pattern":"url('../public/images/slider1.svg')",  
         'CTA':"url('../public/images/CTA.svg')",
+        'mCTA':"url('../public/images/mCTA.svg')",
       },
     },
   },

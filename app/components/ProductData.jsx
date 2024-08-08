@@ -60,13 +60,7 @@ const productData = [
     url: Product1,
     action: "View details",
   },
-  {
-    id:"9",
-    name: "One piece closed Ostomy bag ",
-    model: "Model: 2102",
-    url: Product1,
-    action: "View details",
-  },
+  
 ];
 
 const ProductData = ({limit}) => {

@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'Nohemi';
+    src: url('../public/fonts/Nohemi-Regular.woff') format('woff'),
+         url('../public/fonts/Nohemi-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Nohemi';
+    src: url('../public/fonts/Nohemi-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Nohemi';
+    src: url('../public/fonts/Nohemi-Medium.ttf') format('ttf'),
+         url('../public/fonts/Nohemi-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }

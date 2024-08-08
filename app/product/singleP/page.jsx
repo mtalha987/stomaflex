@@ -1,4 +1,6 @@
+"use client"
 import React from "react";
+import { useState } from 'react';
 // import { useRouter } from "next/router";
 import PageNameBanner from "../../components/PageNameBanner";
 import Banner from "../../components/Banner";
@@ -6,6 +8,7 @@ import AboutHeroImg from '@/public/images/aboutHero.svg';
 import BackButton from "@/app/components/product/BackButton";
 import ProductMainDetail from "@/app/components/product/ProductMainDetail";
 import RelatedProducts from "@/app/components/product/RelatedProducts";
+import Popup from "@/app/components/product/Popup";
 
 
 // const productData = [
@@ -83,13 +86,21 @@ const ProductDetails = () => {
   // if (!product) {
   //   return <p>Product not found</p>;
   // }
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
     <>
       <PageNameBanner title="Product Page" image={AboutHeroImg}/>
       <BackButton/>
-      <ProductMainDetail/>
+      <ProductMainDetail openPop={setIsPopupOpen}/>
       <RelatedProducts/>
       <Banner/>
+      <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <button onClick={() => setIsPopupOpen(true)} className="bg-purple-600 text-white px-4 py-2 rounded">
+        Open Pop-up
+      </button>
+
+      <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+    </div>
     </>
   );
 };
