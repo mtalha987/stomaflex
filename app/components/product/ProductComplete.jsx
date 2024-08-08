@@ -7,8 +7,8 @@ import ProductData from "../ProductData";
 const ProductComplete = () => {
   return (
     <>
-      <div className="flex xs:flex-wrap justify-between xl:px-[90px] lg:px-[40px] px-5 gap-5">
-        <div className=" sm:w-[350px]  mt-14">
+      <div className="flex xs:flex-wrap justify-between xs:justify-center xl:px-[90px] lg:px-[40px] px-5 gap-5">
+        <div className=" sm:w-[350px]  mt-14 ">
           <div className="lg:w-[350px] pb-3 bg-white shadow">
             <form className="flex mb-3">
               <input
