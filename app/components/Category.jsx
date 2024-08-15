@@ -23,7 +23,7 @@ const Category = () => {
   ];
   return (
     <>
-      <div className="flex xl:flex-nowrap flex-wrap justify-center  gap-3 mt-7">
+      <div className="hidden sm:flex xl:flex-nowrap flex-wrap justify-center  gap-3 mt-7">
         {catalogData.map((info, id) => (
           <div
             className="h-[35px] px-[15px] py-2.5 rounded-lg border border-little-gray justify-center items-center gap-2.5 inline-flex font-normal font-primary text-[13px]"

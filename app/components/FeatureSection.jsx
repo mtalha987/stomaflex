@@ -14,7 +14,7 @@ const FeatureSection = () => {
   ];
   return (
     <>
-      <div className="mt-16 xl:px-[90px] lg:px-[40px] px-5">
+      <div className="mt-20 xl:px-[90px] lg:px-[40px] px-5">
         <h2 className="text-primary text-[42px] font-normal font-nohemi text-center">
           Ostomy Bag Series
         </h2>
