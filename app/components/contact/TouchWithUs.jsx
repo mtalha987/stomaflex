@@ -5,7 +5,7 @@ import TouchContact from "@/public/images/touchContact.svg";
 const TouchWithUs = () => {
   return (
     <>
-      <div className="xl:px-[90px] lg:px-[40px] px-5 flex mt-20 bg-white lg:justify-between flex-wrap justify-center ">
+      <div className=" 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 xl:px-[90px] lg:px-[40px] px-5 flex mt-20 bg-white lg:justify-between flex-wrap justify-center ">
         <div className="py-20 lg:pl-14 xs:pl-3 pl-5 shadow-lg lg:w-6/12">
           <h2 className="text-black text-[32px] font-normal font-nohemi">
             Get In Touch With Us
@@ -43,7 +43,7 @@ const TouchWithUs = () => {
           </form>
         </div>
         <div className="lg:w-6/12 flex justify-end mt-12 lg:mt-0">
-          <Image src={TouchContact} alt="Contact Us" />
+          <Image src={TouchContact} alt="Contact Us" className="" />
         </div>
       </div>
     </>

@@ -19,8 +19,8 @@ const LocationMap = () => {
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen />
       </div>
-      <div className="flex flex-wrap justify-center md:-mt-36 xl:px-0 lg:px-[40px] px-5 xs:gap-5">
-        <div className="bg-[#F6E9F4] py-24 xl:pl-36 pl-[5%] pr-[100px] xs:w-full lg:pr-0 lg:w-[30%] ">
+      <div className="flex flex-wrap justify-center md:-mt-36 xl:px-0 lg:px-[40px] px-5 xs:gap-5  2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0">
+        <div className="bg-[#F6E9F4] py-24 xl:pl-36 pl-[5%] pr-[100px] xs:w-full lg:pr-0 lg:w-[30%] 2xl:w-[33%] ">
           <div>
             <Image src={PhoneIcon} alt="Phone Icon" />
           </div>
@@ -34,7 +34,7 @@ const LocationMap = () => {
             (12+) 123 3456
           </p>
         </div>
-        <div className="bg-[#E2BADC]  py-24 xl:pl-36 pl-[5%] pr-[100px] lg:pr-0 xs:w-full lg:w-[30%]  ">
+        <div className="bg-[#E2BADC]  py-24 xl:pl-36 pl-[5%] pr-[100px] lg:pr-0 xs:w-full lg:w-[30%] 2xl:w-[33%]   ">
           <div>
             <Image src={MailIcon} alt="Phone Icon" />
           </div>
@@ -48,7 +48,7 @@ const LocationMap = () => {
             support@yoursite.com
           </p>
         </div>
-        <div className="bg-[#F6E9F4] py-24 xl:pl-36 pl-[5%] pr-[100px] xs:w-full lg:pr-0 lg:w-[30%] ">
+        <div className="bg-[#F6E9F4] py-24 xl:pl-36 pl-[5%] pr-[100px] xs:w-full lg:pr-0 lg:w-[30%] 2xl:w-[33%]  ">
           <div>
             <Image src={LocationIcon} alt="Phone Icon" />
           </div>
