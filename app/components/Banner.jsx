@@ -11,7 +11,7 @@ const Banner = () => {
         <div className='mt-14'>
             <h2 className=" text-white text-[42px] font-normal font-arial leading-[47.88px]">Get 20% off on Jurhy</h2>
             <p className='text-white text-base font-normal font-secondary leading-normal mt-4'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <div className="px-[25px] py-3 mt-8  text-primary justify-center items-center gap-4 inline-flex bg-white text-base font-medium font-primary">
+            <div className="px-[25px]  mb-5 py-3 mt-8  text-primary justify-center items-center gap-4 inline-flex bg-white text-base font-medium font-primary">
               Get this from Jurhy <Image src={RightArrow} alt="Right Arrow"  />
             </div>
         </div>
