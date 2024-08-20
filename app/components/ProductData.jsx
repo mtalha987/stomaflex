@@ -10,6 +10,7 @@ const productData = [
     model: "Model: 2102",
     url: Product1,
     action: "View details",
+    category: "One-piece Colostomy Bag"
   },
   {
     id:"2",
@@ -17,6 +18,7 @@ const productData = [
     model: "Model: 2102",
     url: Product1,
     action: "View details",
+    category: "One-piece Ostomy Bag",
   },
   {
     id:"3",
@@ -24,6 +26,7 @@ const productData = [
     model: "Model: 2102",
     url: Product1,
     action: "View details",
+    category: "Two-piece Ostomy Bag",
   },
   {
     id:"4",
@@ -31,6 +34,7 @@ const productData = [
     model: "Model: 2102",
     url: Product1,
     action: "View details",
+    category: "Two-piece Ostomy Bag",
   },
   {
     id:"5",
@@ -38,6 +42,7 @@ const productData = [
     model: "Model: 2102",
     url: Product1,
     action: "View details",
+    category: "Two-piece Skin Barrier",
   },
   {
     id:"6",
@@ -45,6 +50,7 @@ const productData = [
     model: "Model: 2102",
     url: Product1,
     action: "View details",
+    category: "Two-piece Skin Barrier",
   },
   {
     id:"7",
@@ -52,6 +58,7 @@ const productData = [
     model: "Model: 2102",
     url: Product1,
     action: "View details",
+    category: "Two-piece Skin Barrier",
   },
   {
     id:"8",
@@ -59,13 +66,16 @@ const productData = [
     model: "Model: 2102",
     url: Product1,
     action: "View details",
+    category: "Two-piece Skin Barrier",
   },
   
 ];
 
-const ProductData = ({limit,gridSizeL,gridSizeM,gridSizeS}) => {
+const ProductData = ({limit,gridSizeL,gridSizeM,gridSizeS, selectedCategory}) => {
 
-  const displayedProducts = limit ? productData.slice(0, limit) : productData;
+  const filteredProducts = selectedCategory === "All Products" ? productData : productData.filter(product => product.category === selectedCategory);
+
+const displayedProducts = limit ? filteredProducts.slice(0, limit) : filteredProducts;
   return (
     <>
       <div className={`grid gap-10 justify-center mt-14 grid-cols-1 sm:grid-cols-${gridSizeS} md:grid-cols-${gridSizeM} lg:grid-cols-${gridSizeL}`}>

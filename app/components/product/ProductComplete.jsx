@@ -1,10 +1,17 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import ArrowDown from "@/public/images/arrowDown.svg";
 import CategoryList from "./CategoryList";
 import ProductData from "../ProductData";
 
 const ProductComplete = () => {
+
+  const [selectedCategory, setSelectedCategory] = useState("All Products");
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
   return (
     <>
       <div className="flex flex-wrap md:flex-nowrap  2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0  md:justify-between justify-center xl:px-[90px] lg:px-[40px] px-5 gap-5">
@@ -27,11 +34,11 @@ const ProductComplete = () => {
             </div>
             <div className="w-full h-[0px] border border-[#eae9e8] mt-6"></div>
             {/* Categories List Call */}
-            <CategoryList />
+            <CategoryList  onCategorySelect={handleCategorySelect} selectedCategory={selectedCategory} />
           </div>
         </div>
         <div className="xl:w-[70%] md:w-[74%] w-full">
-          <ProductData gridSizeL={3} gridSizeM={2} gridSizeS={2} limit={12}/>
+          <ProductData gridSizeL={3} gridSizeM={2} gridSizeS={2} limit={12}  selectedCategory={selectedCategory}/>
           <div className="flex gap-2 justify-center lg:mt-16 mt-5 lg:mb-20 mb-5 ">
             <div className="w-10 h-10 bg-white shadow flex justify-center items-center rotate-90">
               <Image src={ArrowDown} />
