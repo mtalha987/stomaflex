@@ -1,13 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Product1 from "@/public/images/product1.svg";
+import Product1 from "@/public/images/oneCostomy1.svg";
+import Product2 from "@/public/images/oneCostomy2.svg";
+import Product3 from "@/public/images/oneCostomy3.svg";
+import Product4 from "@/public/images/oneCostomy4.svg";
+import Product5 from "@/public/images/oneCostomy5.svg";
 
 const productData = [
   {
     id:"1",
     name: "One piece closed Ostomy bag ",
-    model: "Model: 2102",
+    model: "Model: 1106",
     url: Product1,
     action: "View details",
     category: "One-piece Colostomy Bag"
@@ -15,58 +19,34 @@ const productData = [
   {
     id:"2",
     name: "One piece closed Ostomy bag ",
-    model: "Model: 2102",
-    url: Product1,
+    model: "Model: 1102",
+    url: Product2,
     action: "View details",
-    category: "One-piece Ostomy Bag",
+    category: "One-piece Colostomy Bag"
   },
   {
     id:"3",
     name: "One piece closed Ostomy bag ",
-    model: "Model: 2102",
-    url: Product1,
+    model: "Model: 1105",
+    url: Product3,
     action: "View details",
-    category: "Two-piece Ostomy Bag",
+    category: "One-piece Colostomy Bag"
   },
   {
     id:"4",
     name: "One piece closed Ostomy bag ",
-    model: "Model: 2102",
-    url: Product1,
+    model: "Model: 1169",
+    url: Product4,
     action: "View details",
-    category: "Two-piece Ostomy Bag",
+    category: "One-piece Colostomy Bag"
   },
   {
     id:"5",
     name: "One piece closed Ostomy bag ",
-    model: "Model: 2102",
-    url: Product1,
+    model: "Model: 1103",
+    url: Product5,
     action: "View details",
-    category: "Two-piece Skin Barrier",
-  },
-  {
-    id:"6",
-    name: "One piece closed Ostomy bag ",
-    model: "Model: 2102",
-    url: Product1,
-    action: "View details",
-    category: "Two-piece Skin Barrier",
-  },
-  {
-    id:"7",
-    name: "One piece closed Ostomy bag ",
-    model: "Model: 2102",
-    url: Product1,
-    action: "View details",
-    category: "Two-piece Skin Barrier",
-  },
-  {
-    id:"8",
-    name: "One piece closed Ostomy bag ",
-    model: "Model: 2102",
-    url: Product1,
-    action: "View details",
-    category: "Two-piece Skin Barrier",
+    category: "One-piece Colostomy Bag"
   },
   
 ];

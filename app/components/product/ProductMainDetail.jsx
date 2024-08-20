@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Product1 from "@/public/images/product1.svg";
+import Product2 from "@/public/images/oneCostomy1.svg";
 import TabsProduct from "./TabsProduct";
 
 const ProductMainDetail = (props) => {
   return (
     <>
-      <div className="xl:px-[90px] 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 lg:px-[40px] mt-10 px-5 flex flex-wrap md:flex-nowrap xl:gap-[90px] md:gap-10 ">
-        <div className="md:w-6/12 sm:w-[60%] bg-white shadow md:mt-0 mt-10">
-          <Image src={Product1} className="w-full py-16 px-14" />
+      <div className="xl:px-[90px] h-[600px] 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 lg:px-[40px] mt-10 px-5 flex flex-wrap md:flex-nowrap xl:gap-[90px] md:gap-10 ">
+        <div className="md:w-6/12 h-[600px]  sm:w-[60%] bg-white shadow md:mt-0 mt-10">
+          <Image src={Product2} className="w-full py-16 px-14 h-[600px]" />
         </div>
         <div className="md:w-6/12">
           <div>
@@ -39,7 +40,6 @@ const ProductMainDetail = (props) => {
         </div>
       </div>
       <TabsProduct/>
-      {/* <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} /> */}
     </>
   );
 };
