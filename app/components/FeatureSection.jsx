@@ -18,9 +18,9 @@ const FeatureSection = () => {
         <h2 className="text-primary text-[42px] font-normal font-nohemi text-center">
           Ostomy Bag Series
         </h2>
-        <div className="flex gap-5 2xl:gap-10 justify-center mt-14 flex-wrap md:flex-nowrap">
+        <div className="grid gap-10 2xl:gap-10 justify-center mt-14 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {OstomyBagData.map((item, index) => (
-                <div className="bg-white shadow-lg items-center py-8 flex flex-col  justify-center w-[300px] md:max-w-[22.6%] sm:max-w-[65%] xs:min-w-full  lg:max-w-[23.6%]  xl:max-w-[23.6%] 2xl:min-w-[22.9%]"  key={index}>
+                <div className="bg-white shadow-lg items-center py-8 flex flex-col  justify-center"  key={index}>
                 <Image src={item.url} alt="Ostomy Bag" />
                 <h2 className="mt-11 px-6 text-center text-black text-xl font-medium font-primary leading-normal">{item.name}</h2>
               </div>

@@ -11,7 +11,7 @@ export default function Home() {
     <>
     <SliderHero/>
     <FeatureSection/>
-    <Product/>
+    <Product />
     <Banner/>
     <AboutUs/>
     <Banner/>

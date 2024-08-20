@@ -7,13 +7,13 @@ import ProductData from "../ProductData";
 const ProductComplete = () => {
   return (
     <>
-      <div className="flex xs:flex-wrap  2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0  justify-between xs:justify-center xl:px-[90px] lg:px-[40px] px-5 gap-5">
-        <div className=" sm:w-[350px]  mt-14 ">
-          <div className="lg:w-[350px] pb-3 bg-white shadow">
+      <div className="flex flex-wrap md:flex-nowrap  2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0  md:justify-between justify-center xl:px-[90px] lg:px-[40px] px-5 gap-5">
+        <div className=" md:w-[26%] xl:w-[350px] w-full  mt-14 ">
+          <div className="xl:w-[350px] pb-3 bg-white shadow">
             <form className="flex mb-3">
               <input
                 type="text"
-                className="w-full xl:w-[400px]  h-14 px-[16px] py-4 bg-white shadow justify-start items-start gap-2.5 inline-flex text-[#bdbab8] text-[13px] font-normal font-primary leading-tight"
+                className="w-full xl:w-[350px]  h-14 px-[16px] py-4 bg-white shadow justify-start items-start gap-2.5 inline-flex text-[#bdbab8] text-[13px] font-normal font-primary leading-tight"
                 placeholder="Search"
               />
             </form>
@@ -30,8 +30,8 @@ const ProductComplete = () => {
             <CategoryList />
           </div>
         </div>
-        <div className="">
-          <ProductData />
+        <div className="xl:w-[70%] md:w-[74%] w-full">
+          <ProductData gridSizeL={3} gridSizeM={2} gridSizeS={2} limit={12}/>
           <div className="flex gap-2 justify-center lg:mt-16 mt-5 lg:mb-20 mb-5 ">
             <div className="w-10 h-10 bg-white shadow flex justify-center items-center rotate-90">
               <Image src={ArrowDown} />
