@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React , { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Product1 from "@/public/images/oneCostomy1.svg";
@@ -10,7 +11,7 @@ import Product5 from "@/public/images/oneCostomy5.svg";
 const productData = [
   {
     id:"1",
-    name: "One piece closed Ostomy bag ",
+    name: "one piece Colostomy Ostomy bag ",
     model: "Model: 1106",
     url: Product1,
     action: "View details",
@@ -18,7 +19,7 @@ const productData = [
   },
   {
     id:"2",
-    name: "One piece closed Ostomy bag ",
+    name: "one piece Colostomy Ostomy bag ",
     model: "Model: 1102",
     url: Product2,
     action: "View details",
@@ -26,7 +27,7 @@ const productData = [
   },
   {
     id:"3",
-    name: "One piece closed Ostomy bag ",
+    name: "one piece Colostomy Ostomy bag ",
     model: "Model: 1105",
     url: Product3,
     action: "View details",
@@ -34,7 +35,7 @@ const productData = [
   },
   {
     id:"4",
-    name: "One piece closed Ostomy bag ",
+    name: "one piece Colostomy Ostomy bag ",
     model: "Model: 1169",
     url: Product4,
     action: "View details",
@@ -42,7 +43,7 @@ const productData = [
   },
   {
     id:"5",
-    name: "One piece closed Ostomy bag ",
+    name: "one piece Colostomy Ostomy bag ",
     model: "Model: 1103",
     url: Product5,
     action: "View details",
@@ -51,7 +52,27 @@ const productData = [
   
 ];
 
-const ProductData = ({limit,gridSizeL,gridSizeM,gridSizeS, selectedCategory}) => {
+const ProductData = ({initialLimit,gridSizeL,gridSizeM,gridSizeS, selectedCategory, mobileLimit}) => {
+
+  const [limit, setLimit] = useState(initialLimit);
+
+  useEffect(() => {
+    const updateLimitBasedOnScreenSize = () => {
+      if (window.innerWidth <= 640) { // Mobile screen size (<= 640px)
+        setLimit(mobileLimit);
+      } else {
+        setLimit(initialLimit);
+      }
+    };
+
+    updateLimitBasedOnScreenSize();
+    
+    window.addEventListener('resize', updateLimitBasedOnScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', updateLimitBasedOnScreenSize);
+    };
+  }, [initialLimit, mobileLimit]);
 
   const filteredProducts = selectedCategory === "All Products" ? productData : productData.filter(product => product.category === selectedCategory);
 

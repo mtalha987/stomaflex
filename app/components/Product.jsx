@@ -14,7 +14,7 @@ const Product = () => {
           <MobileDropDown />
         </div>
         <Category />
-        <ProductData gridSizeL={4} gridSizeM={3} gridSizeS={2} limit={8} selectedCategory="All Products" />
+        <ProductData gridSizeL={4} gridSizeM={3} gridSizeS={2} initialLimit={8} mobileLimit={4}  selectedCategory="All Products" />
       </div>
     </>
   );
