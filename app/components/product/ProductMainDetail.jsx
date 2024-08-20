@@ -7,9 +7,9 @@ import TabsProduct from "./TabsProduct";
 const ProductMainDetail = (props) => {
   return (
     <>
-      <div className="xl:px-[90px] md:h-[600px] 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 lg:px-[40px] mt-10 px-5 flex flex-wrap md:flex-nowrap xl:gap-[90px] md:gap-10 ">
-        <div className="md:w-6/12 md:h-[600px]  sm:w-[60%] bg-white shadow md:mt-0 mt-10 mx-auto ">
-          <Image src={Product2} className="w-full scale-150 lg:scale-100 py-16 px-14 h-[600px] xs:h-[350px] " />
+      <div className="xl:px-[90px] md:h-[600px] 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 lg:px-[40px] mt-10 px-5 flex flex-wrap md:flex-nowrap xl:gap-[90px] md:gap-10 overflow-hidden">
+        <div className="md:w-6/12 md:h-[600px] h-auto  sm:w-[60%] bg-white shadow md:mt-0 mt-10 mx-auto ">
+          <Image src={Product2} alt="Product" className="w-full scale-150 lg:scale-100 py-16 px-14 md:h-[600px] h-[350px] overflow-hidden " />
         </div>
         <div className="md:w-6/12 xs:overflow-hidden">
           <div>
