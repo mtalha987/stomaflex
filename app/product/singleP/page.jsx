@@ -94,13 +94,7 @@ const ProductDetails = () => {
       <ProductMainDetail openPop={setIsPopupOpen}/>
       <RelatedProducts/>
       <Banner/>
-      <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <button onClick={() => setIsPopupOpen(true)} className="bg-purple-600 text-white px-4 py-2 rounded">
-        Open Pop-up
-      </button>
-
       <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-    </div>
     </>
   );
 };
