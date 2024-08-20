@@ -7,7 +7,7 @@ import LinePrimary from "@/public/images/lineP.svg";
 const AboutUs = () => {
   return (
     <>
-      <div className="mt-32 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 xl:px-[90px] lg:px-[40px] px-5 flex flex-wrap justify-center xl:justify-normal ">
+      <div className="sm:mt-32 mt-3 2xl:max-w-[1440px] 2xl:mx-auto 2xl:px-0 xl:px-[90px] lg:px-[40px] px-5 flex flex-wrap justify-center xl:justify-normal ">
         <div className="xl:w-[40%] ">
           <div className=" lg:w-[90%] text-neutral-gray text-xl font-semibold font-primary leading-[30px] flex gap-3 mt-10 ">
             <Image src={LinePrimary} alt="Line" className="" />
@@ -32,9 +32,9 @@ const AboutUs = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap  justify-center xl:justify-end gap-10 xl:w-[60%]">
-          <Image src={AboutUs2} alt="About Us Image"  className="xl:w-[300px] xl:h-[435px] xs:min-w-full" />
-          <Image src={AboutUs1} alt="About Us Image" className="xl:w-[300px] xl:h-[435px] xs:min-w-full" />
+        <div className="flex  justify-between xl:justify-end xs:gap-1 gap-2  md:gap-10 xl:w-[60%]">
+          <Image src={AboutUs2} alt="About Us Image"  className="xl:w-[300px] min-w-[140px]  xl:h-[435px] " />
+          <Image src={AboutUs1} alt="About Us Image"  className="xl:w-[300px] min-w-[140px]  xl:h-[435px]" />
         </div>
       </div>
     </>
