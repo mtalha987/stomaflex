@@ -6,14 +6,26 @@ import MenuOpen from "@/public/images/menuOpen.svg";
 import MenuClose from "@/public/images/menuClose.svg";
 import RightArrow from "@/public/images/rightArrow.svg";
 import Link from "next/link";
+import SocialIcons from "@/public/images/social.svg";
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false); // State to control mobile menu
+  const [isAnimatingOut, setIsAnimatingOut] = useState(false);
+
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Toggle the mobile menu state
+    if (isOpen) {
+      setIsAnimatingOut(true); // Start the closing animation
+      setTimeout(() => {
+        setIsAnimatingOut(false);
+        setIsOpen(false); // Close the menu after the animation completes
+      }, 400); // Duration of the moveOut animation (in milliseconds)
+    } else {
+      setIsOpen(true); // Open the menu
+    }
   };
   const handleLinkClick = () => {
-    setIsOpen(false);
+    toggleMenu();
   };
   return (
     <>
@@ -65,9 +77,11 @@ const Header = () => {
         {/* Mobile Menu */}
         {isOpen && (
             
-          <div className="lg:hidden bg-white flex items-center  flex-col ">
+          <div className={`lg:hidden bg-white flex items-center flex-col   transition-all duration-700 ease-in-out  ${
+            isAnimatingOut ? 'animationMoveOut ' : 'animationMove h-[84.9vh]'
+        }`}>
             
-            <ul className="flex items-center w-full flex-col gap-4 pt-4 text-black text-base font-normal font-secondary leading-tight">
+            <ul className="flex items-center w-full flex-col gap-8 pt-4 text-black text-base font-normal font-secondary leading-tight">
               <li><Link href="/" onClick={handleLinkClick}>Home</Link></li>
               <div className="w-full h-[0px] opacity-40 border border-[#0000004D] "></div>
 
@@ -83,6 +97,9 @@ const Header = () => {
             <div className="px-[25px] mt-12 py-3 bg-primary justify-center items-center gap-4 inline-flex text-white text-base font-medium font-primary">
               Get this from Jurhy <Image src={RightArrow} alt="Right Arrow" />
             </div>
+            <div className="mt-10">
+                  <Image src={SocialIcons} alt="social icons" />
+                </div>
           </div>
         )}
       </div>
