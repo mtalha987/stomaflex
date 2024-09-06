@@ -6,7 +6,11 @@ import MenuOpen from "@/public/images/menuOpen.svg";
 import MenuClose from "@/public/images/menuClose.svg";
 import RightArrow from "@/public/images/rightArrow.svg";
 import Link from "next/link";
-import SocialIcons from "@/public/images/social.svg";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaYoutube } from "react-icons/fa";
+import SocialIcons from "./SocialIcons";
 
 
 const Header = () => {
@@ -36,10 +40,11 @@ const Header = () => {
             <span> / </span>
             <span>+04 89 76 4576</span>
           </div>
-          <div>
-            <span className="font-normal leading-tight uppercase">
-              Open from 9am to 5pm - Closed on Weekends
-            </span>
+          <div className="flex gap-2 ">
+            <SocialIcons icon={<FaFacebookF />} />
+            <SocialIcons icon={<FaTwitter />} />
+            <SocialIcons icon={<AiFillInstagram />} />
+            <SocialIcons icon={<FaYoutube />} />
           </div>
         </div>
         <div className="w-full 2xl:max-w-[1440px] 2xl:mx-auto h-[0px] opacity-40 border border-neutral-gray mt-2 mb-5 hidden lg:block"></div>
@@ -77,8 +82,8 @@ const Header = () => {
         {/* Mobile Menu */}
         {isOpen && (
             
-          <div className={`lg:hidden bg-white flex items-center flex-col   transition-all duration-700 ease-in-out  ${
-            isAnimatingOut ? 'animationMoveOut ' : 'animationMove h-[84.9vh]'
+          <div className={`lg:hidden absolute z-30 w-full left-0 bg-white flex items-center flex-col   transition-all duration-700 ease-in-out  ${
+            isAnimatingOut ? 'animationMoveOut ' : 'animationMove h-[86vh]'
         }`}>
             
             <ul className="flex items-center w-full flex-col gap-8 pt-4 text-black text-base font-normal font-secondary leading-tight">
@@ -97,9 +102,12 @@ const Header = () => {
             <div className="px-[25px] mt-12 py-3 bg-primary justify-center items-center gap-4 inline-flex text-white text-base font-medium font-primary">
               Get this from Jurhy <Image src={RightArrow} alt="Right Arrow" />
             </div>
-            <div className="mt-10">
-                  <Image src={SocialIcons} alt="social icons" />
-                </div>
+            <div className="flex gap-2 mt-10 mb-28">
+            <SocialIcons icon={<FaFacebookF />} />
+            <SocialIcons icon={<FaTwitter />} />
+            <SocialIcons icon={<AiFillInstagram />} />
+            <SocialIcons icon={<FaYoutube />} />
+          </div>
           </div>
         )}
       </div>

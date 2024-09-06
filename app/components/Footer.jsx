@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Logo from "@/public/images/logo.svg";
-import SocialIcons from "@/public/images/social.svg";
 import Link from "next/link";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaYoutube } from "react-icons/fa";
+import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
   return (
@@ -27,9 +31,12 @@ const Footer = () => {
                 <h2 className=" text-light-black text-xl font-normal font-arial">
                   Social Links
                 </h2>
-                <div className="mt-5">
-                  <Image src={SocialIcons} alt="social icons" />
-                </div>
+                <div className="flex gap-2 mt-5">
+            <SocialIcons icon={<FaFacebookF />} />
+            <SocialIcons icon={<FaTwitter />} />
+            <SocialIcons icon={<AiFillInstagram />} />
+            <SocialIcons icon={<FaYoutube />} />
+          </div>
               </div>
             </div>
 
